@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars</title>
+  <style>
+    body {
+      background-color: lightyellow;
+      font-family: Arial, sans-serif;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    nav {
+      text-align: center;
+      background-color: #f3f3f3;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: black;
+    }
+
+    marquee img {
+      border-radius: 10px;
+      margin: 5px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .car-gallery {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .car-gallery img {
+      margin: 10px;
+      border: 3px solid #ccc;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .car-gallery img:hover {
+      transform: scale(1.05);
+      border-color: #888;
+    }
+
+    /* Info box style */
+    .info-box {
+      display: none;
+      background-color: #fff8dc;
+      border: 2px solid #444;
+      width: 60%;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="images/logo.png" alt="Logo" width="9%" align="left">
+    <h1>Modelled Cars</h1>
+  </header>
+
+  <hr>
+
+  <nav>
+    <a href="index.html">Home</a>
+    
+  </nav>
+
+  <hr>
+
+  <marquee>
+    <img src="images/lan1.png" alt="" height="400px" width="600px">
+    <img src="images/lan2.png" alt="" height="400px" width="600px">
+    <img src="images/lan3.png" alt="" height="400px" width="600px">
+  </marquee>
+
+  <hr>
+
+  <h1>Latest Models</h1>
+
+  <!-- ✅ Clickable images -->
+  <div class="car-gallery">
+    <img src="images/por1.png" alt="Bugatti Model 1" height="250px" width="400px" onclick="showInfo('model1')">
+    <img src="images/por2.png" alt="Bugatti Model 2" height="250px" width="400px" onclick="showInfo('model2')">
+    <img src="images/por3.png" alt="Bugatti Model 3" height="250px" width="400px" onclick="showInfo('model3')">
+  </div>
+
+  <!-- ✅ Info sections -->
+  <div id="model1" class="info-box">
+    <h2>Bugatti Veyron</h2>
+    <p>
+      The Bugatti Veyron is a masterpiece of engineering featuring an 8.0L quad-turbocharged W16 engine,
+      producing over 1000 horsepower. It can reach a top speed of 407 km/h, making it one of the fastest cars in the world.
+    </p>
+  </div>
+
+  <div id="model2" class="info-box">
+    <h2>Bugatti Chiron</h2>
+    <p>
+      The Bugatti Chiron combines art, performance, and luxury. It’s powered by an 8.0L W16 engine producing 1500 hp
+      and offers a top speed of 420 km/h. Its aerodynamic design and comfort redefine supercar excellence.
+    </p>
+  </div>
+
+  <div id="model3" class="info-box">
+    <h2>Bugatti Divo</h2>
+    <p>
+      The Bugatti Divo is a hypercar designed for agility and performance. With a 1500 hp W16 engine and unique handling setup,
+      it focuses on cornering and exclusivity, with only 40 units ever built.
+    </p>
+  </div>
+
+  <footer>
+    <hr>
+    <p align="center">© 2025 Modelled Cars. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function showInfo(id) {
+      // Hide all info boxes
+      document.querySelectorAll('.info-box').forEach(el => el.style.display = 'none');
+      // Show the selected one
+      document.getElementById(id).style.display = 'block';
+      // Smooth scroll to the info box
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
