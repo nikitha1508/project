@@ -1,50 +1,82 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Cars</title>
+    <style>
+        body {
+            background-color: #fff9db; /* fixed invalid body background syntax */
+            color: black;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        header img {
+            width: 60px;
+            height: auto;
+            vertical-align: middle;
+        }
+        nav table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        nav td {
+            padding: 10px 20px;
+        }
+        marquee img {
+            margin-right: 20px;
+        }
+        .car-gallery img {
+            margin: 10px;
+            border: 2px solid #000;
+        }
+    </style>
 </head>
-<body background="images/car1.png" text="black">
+<body>
 <header>
-    <img src="images/logo.png" width="60" height="5%" alt="CarLogo" align="left">
-    </header>
-    <h1>Dream Cars</h1><br>
-    <center>
-<h1>Welcome to Dream Cars</h1>
-    <h3>Explore Your Favorite Cars in Motion!</h3>
-    <table border="1" cellpadding="9" width="80%">
-    </center>
-        <tr>
-            <td align="center"><a href="index.html">Home</a></td>
-            <td align="center"><a href="Cars.html">Cars</a></td>
-            <td align="center"><a href="About.html">About us</a></td>
-            <td align="center"><a href="Contact.html">Contact Us</a></td>
+    <img src="images/logo.png" alt="CarLogo">
+    <h1>Dream Cars</h1>
+</header>
 
+<h2>Welcome to Dream Cars</h2>
+
+<nav>
+    <table border="1" cellpadding="9">
+        <tr>
+            <td><a href="index.html">Home</a></td>
+            <td><a href="Cars.html">Cars</a></td>
+            <td><a href="About.html">About Us</a></td>
+            <td><a href="Contact.html">Contact Us</a></td>
         </tr>
     </table>
-    <br>
-    <h2>Trending Cars of 2025</h2>
-    <marquee behavior="scroll" direction="left" scrollamount="6">
-        <img src="images/lan1.png" width="300" height="150" alt="Car 1">
-        <img src="images/lan2.png" width="250" height="150" alt="Car 2">
-        <img src="images/lan3.png" width="250" height="150" alt="Car 3">
-        
-    </marquee>
-    <table border="2" cellpadding="8" cellspacing="50" width=80%></table><br>
-<center>
-  <a href="car1.html">
-    <img src="images/por1.png" width="300" height="200" alt="Car 1">
-  </a>
-  <p><b>model 1</b></p>
-   <a href="car2.html">
-    <img src="images/por2.png" width="300" height="200" alt="Car 2">
-  </a>
-    <p><b>model 2</b></p>
-  <a href="car3.html">
-    <img src="images/por3.png" width="300" height="200" alt="Car 2">
-  </a>
-      <p><b> model 3</b></p>
-</center>    <p>Enjoy watching your dream cars glide across the screen!</p>
-    <p><small>© 2025 Dream Cars</small></p>
-</center>
+</nav>
+
+<h2>Trending Cars of 2025</h2>
+<marquee behavior="scroll" direction="left" scrollamount="6">
+    <img src="images/lan1.png" width="300" height="150" alt="Car 1">
+    <img src="images/lan2.png" width="250" height="150" alt="Car 2">
+    <img src="images/lan3.png" width="250" height="150" alt="Car 3">
+</marquee>
+
+<div class="car-gallery">
+    <a href="car1.html">
+        <img src="images/por1.png" width="300" height="200" alt="Car 1">
+        <p><b>Model 1</b></p>
+    </a>
+
+    <a href="car2.html">
+        <img src="images/por2.png" width="300" height="200" alt="Car 2">
+        <p><b>Model 2</b></p>
+    </a>
+
+    <a href="car3.html">
+        <img src="images/por3.png" width="300" height="200" alt="Car 3">
+        <p><b>Model 3</b></p>
+    </a>
+</div>
+
+<p>Enjoy watching your dream cars glide across the screen!</p>
+<p><small>© 2025 Dream Cars</small></p>
+
 </body>
 </html>
