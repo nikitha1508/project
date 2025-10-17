@@ -1,82 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Cars</title>
-    <style>
-        body {
-            background-color: #fff9db; /* fixed invalid body background syntax */
-            color: black;
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        header img {
-            width: 60px;
-            height: auto;
-            vertical-align: middle;
-        }
-        nav table {
-            margin: 0 auto;
-            border-collapse: collapse;
-        }
-        nav td {
-            padding: 10px 20px;
-        }
-        marquee img {
-            margin-right: 20px;
-        }
-        .car-gallery img {
-            margin: 10px;
-            border: 2px solid #000;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Cars</title>
+  <style>
+    /* --- Global Styles --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", Arial, sans-serif;
+      color: #222;
+      background: linear-gradient(to bottom right, #f7e6a8, #ffffff);
+      overflow-x: hidden;
+    }
+
+    /* --- Header Section --- */
+    header {
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 60px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header img {
+      width: 80px;
+      height: auto;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #c91f37;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    /* --- Navigation --- */
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: 600;
+      margin: 0 20px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #c91f37;
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      text-align: center;
+      background: url('images/lan1.png') center/cover no-repeat;
+      color: white;
+      padding: 150px 20px;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      color: #f5f5f5;
+    }
+
+    /* --- Trending Cars Section --- */
+    section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #c91f37;
+      margin-bottom: 20px;
+    }
+
+    marquee img {
+      border-radius: 12px;
+      margin-right: 25px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+
+    marquee img:hover {
+      transform: scale(1.05);
+    }
+
+    /* --- Gallery --- */
+    .car-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .car-gallery a {
+      text-decoration: none;
+      color: black;
+      transition: transform 0.3s ease;
+    }
+
+    .car-gallery a:hover {
+      transform: scale(1.05);
+    }
+
+    .car-gallery img {
+      width: 300px;
+      height: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border: none;
+    }
+
+    .car-gallery p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* --- Footer --- */
+    footer {
+      margin-top: 50px;
+      background-color: #c91f37;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* --- Responsive Design --- */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .car-gallery img {
+        width: 90%;
+      }
+    }
+  </style>
 </head>
 <body>
-<header>
-    <img src="images/logo.png" alt="CarLogo">
-    <h1>Modelled  Cars</h1>
-</header>
 
-<h2>Welcome to Dream Cars</h2>
+  <!-- HEADER -->
+  <header>
+    <img src="images/logo.png" alt="Car Logo" />
+    <h1>Modelled Cars</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="Cars.html">Cars</a>
+      <a href="About.html">About Us</a>
+      <a href="Contact.html">Contact Us</a>
+    </nav>
+  </header>
 
-<nav>
-    <table border="1" cellpadding="9">
-        <tr>
-            <td><a href="index.html">Home</a></td>
-            <td><a href="Cars.html">Cars</a></td>
-            <td><a href="About.html">About Us</a></td>
-            <td><a href="Contact.html">Contact Us</a></td>
-        </tr>
-    </table>
-</nav>
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Dream Cars</h2>
+      <p>Explore the beauty, power, and innovation of 2025's finest cars.</p>
+    </div>
+  </div>
 
-<h2>Trending Cars of 2025</h2>
-<marquee behavior="scroll" direction="left" scrollamount="6">
-    <img src="images/lan1.png" width="300" height="150" alt="Car 1">
-    <img src="images/lan2.png" width="250" height="150" alt="Car 2">
-    <img src="images/lan3.png" width="250" height="150" alt="Car 3">
-</marquee>
+  <!-- TRENDING CARS -->
+  <section>
+    <h2>🔥 Trending Cars of 2025 🔥</h2>
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      <img src="images/lan1.png" width="300" height="150" alt="Car 1" />
+      <img src="images/lan2.png" width="250" height="150" alt="Car 2" />
+      <img src="images/lan3.png" width="250" height="150" alt="Car 3" />
+    </marquee>
+  </section>
 
-<div class="car-gallery">
-    <a href="car1.html">
-        <img src="images/por1.png" width="300" height="200" alt="Car 1">
-        <p><b>Model 1</b></p>
-    </a>
+  <!-- CAR GALLERY -->
+  <section>
+    <h2>🚗 Explore Our Models 🚗</h2>
+    <div class="car-gallery">
+      <a href="car1.html">
+        <img src="images/por1.png" alt="Car 1" />
+        <p>Model 1</p>
+      </a>
 
-    <a href="car2.html">
-        <img src="images/por2.png" width="300" height="200" alt="Car 2">
-        <p><b>Model 2</b></p>
-    </a>
+      <a href="car2.html">
+        <img src="images/por2.png" alt="Car 2" />
+        <p>Model 2</p>
+      </a>
 
-    <a href="car3.html">
-        <img src="images/por3.png" width="300" height="200" alt="Car 3">
-        <p><b>Model 3</b></p>
-    </a>
-</div>
+      <a href="car3.html">
+        <img src="images/por3.png" alt="Car 3" />
+        <p>Model 3</p>
+      </a>
+    </div>
+  </section>
 
-<p>Enjoy watching your dream cars glide across the screen!</p>
-<p><small>© 2025 Dream Cars</small></p>
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Dream Cars | Designed with ❤️ by Car Enthusiasts
+  </footer>
 
 </body>
 </html>
